@@ -86,7 +86,7 @@ export default {
   letter-spacing: 0.18em;
   font-size: 0.82rem;
   font-weight: 700;
-  color: #5eead4;
+  color: #2b9d5e;
 }
 
 .section-heading h2 {
@@ -94,6 +94,8 @@ export default {
   font-size: clamp(2rem, 4vw, 3.4rem);
   line-height: 1.05;
   letter-spacing: -0.04em;
+  color: #f7fff8;
+  text-shadow: 0 8px 24px rgba(12, 34, 21, 0.32);
 }
 
 .contact-card {
@@ -104,9 +106,9 @@ export default {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(108, 181, 128, 0.18);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 60px rgba(65, 106, 72, 0.12);
   backdrop-filter: blur(16px);
 }
 
@@ -126,14 +128,14 @@ export default {
 
 .contact-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
-  border-color: rgba(94, 234, 212, 0.24);
+  box-shadow: 0 24px 70px rgba(65, 106, 72, 0.16);
+  border-color: rgba(43, 157, 94, 0.24);
 }
 
 .contact-label {
   display: inline-block;
   margin-bottom: 8px;
-  color: #5eead4;
+  color: #2fbd69;
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -143,6 +145,7 @@ export default {
 .contact-card p {
   margin: 0;
   font-size: 1.08rem;
+  color: #153824;
 }
 
 .reveal {

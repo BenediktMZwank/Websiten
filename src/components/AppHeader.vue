@@ -13,10 +13,10 @@
     <section class="hero-content container">
       <div class="hero-text reveal reveal-delay-1" :class="{ visible: visibleHero }">
         <p class="eyebrow">Personal Tennis Training</p>
-        <h1>Modernes Tennistraining fÃ¼r Technik, MatchstÃ¤rke und Selbstvertrauen</h1>
+        <h1>Modernes Tennistraining fuer Technik, Matchstaerke und Selbstvertrauen</h1>
         <p class="subtitle">
-          Individuelles Coaching fÃ¼r AnfÃ¤nger, Fortgeschrittene und ambitionierte
-          Spieler â€“ mit klarer Struktur, spÃ¼rbarem Fortschritt und einem modernen Trainingserlebnis.
+          Individuelles Coaching fuer Anfaenger, Fortgeschrittene und ambitionierte
+          Spieler mit klarer Struktur, spuerbarem Fortschritt und einem modernen Trainingserlebnis.
         </p>
 
         <div class="hero-actions reveal reveal-delay-2" :class="{ visible: visibleHero }">
@@ -34,7 +34,7 @@
             <span class="stat-label">Auf dein Niveau angepasst</span>
           </div>
           <div class="stat-card glass-card floating-card float-delay-3">
-            <span class="stat-number">ðŸŽ¾</span>
+            <span class="stat-number">Court</span>
             <span class="stat-label">Technik, Taktik, Athletik</span>
           </div>
         </div>
@@ -42,12 +42,12 @@
 
       <div class="hero-panel glass-card reveal reveal-delay-2 floating-card" :class="{ visible: visibleHero }">
         <div class="panel-badge">Dein Fokus</div>
-        <h3>Gezielt trainieren statt nur BÃ¤lle schlagen</h3>
+        <h3>Gezielt trainieren statt nur Baelle schlagen</h3>
         <ul>
-          <li><span>ðŸŽ¾</span> Einzeltraining mit persÃ¶nlichem Fokus</li>
-          <li><span>âš¡</span> Matchvorbereitung und Spielsituationen</li>
-          <li><span>ðŸ’ª</span> Beweglichkeit, FuÃŸarbeit und Athletik</li>
-          <li><span>ðŸ§ </span> Mentale StÃ¤rke und Konstanz im Spiel</li>
+          <li><span>Court</span> Einzeltraining mit persoenlichem Fokus</li>
+          <li><span>Speed</span> Matchvorbereitung und Spielsituationen</li>
+          <li><span>Move</span> Beweglichkeit, Fussarbeit und Athletik</li>
+          <li><span>Mind</span> Mentale Staerke und Konstanz im Spiel</li>
         </ul>
       </div>
     </section>
@@ -93,12 +93,19 @@ export default {
   align-items: center;
   gap: 20px;
   margin-bottom: 64px;
+  padding: 16px 22px;
+  border-radius: 20px;
+  background: rgba(247, 255, 248, 0.82);
+  border: 1px solid rgba(105, 179, 124, 0.18);
+  box-shadow: 0 14px 40px rgba(45, 90, 55, 0.1);
+  backdrop-filter: blur(14px);
 }
 
 .logo {
   font-size: 1.7rem;
   font-weight: 800;
   letter-spacing: -0.03em;
+  color: #0f2d1b;
 }
 
 .nav-links {
@@ -110,13 +117,13 @@ export default {
 
 .nav-links a {
   text-decoration: none;
-  color: rgba(248, 250, 252, 0.9);
+  color: rgba(20, 53, 36, 0.86);
   font-weight: 500;
   transition: color 0.25s ease, transform 0.25s ease;
 }
 
 .nav-links a:hover {
-  color: #5eead4;
+  color: #1f8f4d;
   transform: translateY(-1px);
 }
 
@@ -137,7 +144,13 @@ export default {
   letter-spacing: 0.18em;
   font-size: 0.82rem;
   font-weight: 700;
-  color: #5eead4;
+  color: #2b9d5e;
+}
+
+.hero-text,
+.hero-panel {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-text h1 {
@@ -146,6 +159,8 @@ export default {
   line-height: 0.96;
   letter-spacing: -0.05em;
   max-width: 860px;
+  color: #f8fff9;
+  text-shadow: 0 10px 30px rgba(12, 34, 21, 0.35);
 }
 
 .subtitle {
@@ -153,7 +168,8 @@ export default {
   max-width: 720px;
   font-size: 1.14rem;
   line-height: 1.8;
-  color: rgba(226, 232, 240, 0.88);
+  color: rgba(246, 255, 248, 0.94);
+  text-shadow: 0 8px 24px rgba(12, 34, 21, 0.28);
 }
 
 .hero-actions {
@@ -185,8 +201,8 @@ export default {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #2dd4bf, #22c55e);
-  color: #04111d;
+  background: linear-gradient(135deg, #7dff99, #49cb76);
+  color: #082013;
   box-shadow: 0 12px 30px rgba(34, 197, 94, 0.22);
 }
 
@@ -196,15 +212,15 @@ export default {
 }
 
 .btn-ghost {
-  background: rgba(255, 255, 255, 0.06);
-  color: #f8fafc;
-  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.52);
+  color: #18432a;
+  border-color: rgba(90, 167, 111, 0.2);
   backdrop-filter: blur(10px);
 }
 
 .btn-ghost:hover {
   transform: translateY(-2px);
-  border-color: rgba(94, 234, 212, 0.34);
+  border-color: rgba(43, 157, 94, 0.34);
 }
 
 .btn-small {
@@ -212,16 +228,15 @@ export default {
 }
 
 .glass-card {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(108, 181, 128, 0.18);
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: 0 18px 60px rgba(65, 106, 72, 0.12);
   backdrop-filter: blur(16px);
 }
 
 .hero-panel {
   padding: 32px;
   border-radius: 28px;
-  position: relative;
   overflow: hidden;
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
@@ -242,16 +257,16 @@ export default {
 
 .hero-panel:hover {
   transform: translateY(-8px);
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
-  border-color: rgba(94, 234, 212, 0.24);
+  box-shadow: 0 24px 70px rgba(65, 106, 72, 0.16);
+  border-color: rgba(43, 157, 94, 0.24);
 }
 
 .panel-badge {
   display: inline-flex;
   padding: 8px 14px;
   border-radius: 999px;
-  background: rgba(45, 212, 191, 0.14);
-  color: #99f6e4;
+  background: rgba(100, 212, 128, 0.16);
+  color: #217948;
   font-size: 0.82rem;
   font-weight: 700;
   margin-bottom: 18px;
@@ -261,6 +276,7 @@ export default {
   margin: 0 0 18px;
   font-size: 1.7rem;
   line-height: 1.2;
+  color: #133321;
 }
 
 .hero-panel ul {
@@ -275,7 +291,7 @@ export default {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: rgba(248, 250, 252, 0.92);
+  color: rgba(19, 51, 33, 0.92);
 }
 
 .stat-card {
@@ -289,11 +305,12 @@ export default {
 .stat-number {
   font-size: 1.5rem;
   font-weight: 800;
+  color: #133321;
 }
 
 .stat-label {
   font-size: 0.92rem;
-  color: rgba(226, 232, 240, 0.82);
+  color: rgba(30, 68, 44, 0.7);
 }
 
 .reveal {
@@ -377,6 +394,7 @@ export default {
     margin-bottom: 36px;
     align-items: flex-start;
     flex-direction: column;
+    padding: 18px;
   }
 
   .nav-links {

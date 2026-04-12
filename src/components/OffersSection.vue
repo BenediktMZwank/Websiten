@@ -82,9 +82,9 @@ export default {
 }
 
 .section-soft {
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0.42), rgba(8, 17, 32, 0.14));
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(180deg, rgba(233, 255, 237, 0.9), rgba(222, 248, 227, 0.5));
+  border-top: 1px solid rgba(86, 164, 108, 0.1);
+  border-bottom: 1px solid rgba(86, 164, 108, 0.1);
 }
 
 .centered {
@@ -103,7 +103,7 @@ export default {
   letter-spacing: 0.18em;
   font-size: 0.82rem;
   font-weight: 700;
-  color: #5eead4;
+  color: #2b9d5e;
 }
 
 .section-heading h2 {
@@ -111,6 +111,8 @@ export default {
   font-size: clamp(2rem, 4vw, 3.4rem);
   line-height: 1.05;
   letter-spacing: -0.04em;
+  color: #f7fff8;
+  text-shadow: 0 8px 24px rgba(12, 34, 21, 0.32);
 }
 
 .pricing-grid {
@@ -124,9 +126,9 @@ export default {
   padding: 30px;
   border-radius: 28px;
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(108, 181, 128, 0.18);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 60px rgba(65, 106, 72, 0.12);
   backdrop-filter: blur(16px);
 }
 
@@ -146,13 +148,14 @@ export default {
 
 .price-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
-  border-color: rgba(94, 234, 212, 0.24);
+  box-shadow: 0 24px 70px rgba(65, 106, 72, 0.16);
+  border-color: rgba(43, 157, 94, 0.24);
 }
 
 .price-card h3 {
   margin: 0 0 12px;
   font-size: 1.45rem;
+  color: #153824;
 }
 
 .price {
@@ -160,19 +163,20 @@ export default {
   font-size: 3rem;
   font-weight: 800;
   letter-spacing: -0.04em;
+  color: #133321;
 }
 
 .price-text,
 .plan-name {
-  color: rgba(226, 232, 240, 0.82);
+  color: rgba(246, 255, 248, 0.92);
   line-height: 1.8;
 }
 
 .featured {
   position: relative;
   transform: translateY(-8px);
-  border-color: rgba(45, 212, 191, 0.42);
-  background: linear-gradient(180deg, rgba(45, 212, 191, 0.12), rgba(255, 255, 255, 0.07));
+  border-color: rgba(76, 196, 110, 0.35);
+  background: linear-gradient(180deg, rgba(151, 255, 175, 0.3), rgba(255, 255, 255, 0.76));
 }
 
 .featured:hover {
@@ -185,8 +189,8 @@ export default {
   right: 18px;
   padding: 8px 12px;
   border-radius: 999px;
-  background: #2dd4bf;
-  color: #06202b;
+  background: #8cff9b;
+  color: #0b2b17;
   font-size: 0.78rem;
   font-weight: 800;
 }

@@ -101,7 +101,7 @@ export default {
   letter-spacing: 0.18em;
   font-size: 0.82rem;
   font-weight: 700;
-  color: #5eead4;
+  color: #2b9d5e;
 }
 
 .section-heading h2 {
@@ -109,11 +109,13 @@ export default {
   font-size: clamp(2rem, 4vw, 3.4rem);
   line-height: 1.05;
   letter-spacing: -0.04em;
+  color: #f7fff8;
+  text-shadow: 0 8px 24px rgba(12, 34, 21, 0.32);
 }
 
 .section-heading p:last-child,
 .info-card p {
-  color: rgba(226, 232, 240, 0.82);
+  color: rgba(246, 255, 248, 0.92);
   line-height: 1.8;
 }
 
@@ -128,9 +130,9 @@ export default {
   padding: 30px;
   border-radius: 28px;
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(108, 181, 128, 0.18);
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 18px 60px rgba(65, 106, 72, 0.12);
   backdrop-filter: blur(16px);
 }
 
@@ -150,8 +152,8 @@ export default {
 
 .info-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
-  border-color: rgba(94, 234, 212, 0.24);
+  box-shadow: 0 24px 70px rgba(65, 106, 72, 0.16);
+  border-color: rgba(43, 157, 94, 0.24);
 }
 
 .icon-circle {
@@ -164,13 +166,15 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  background: rgba(45, 212, 191, 0.12);
+  color: #1e5a36;
+  background: rgba(121, 231, 148, 0.18);
   margin-bottom: 18px;
 }
 
 .info-card h3 {
   margin: 0 0 12px;
   font-size: 1.45rem;
+  color: #153824;
 }
 
 .reveal {

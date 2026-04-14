@@ -1,5 +1,5 @@
 <template>
-  <div class="page" :style="pageBackgroundStyle">
+  <div class="page">
     <div class="bg-orb orb-1"></div>
     <div class="bg-orb orb-2"></div>
     <div class="bg-grid"></div>
@@ -16,7 +16,6 @@
 </template>
 
 <script>
-import tennisCourtBackground from './assets/tennis-court-header.jpg'
 import AppHeader from './components/AppHeader.vue'
 import BookingSection from './components/BookingSection.vue'
 import ContactSection from './components/ContactSection.vue'
@@ -31,13 +30,6 @@ export default {
     ContactSection,
     OffersSection,
     PhilosophySection,
-  },
-  data() {
-    return {
-      pageBackgroundStyle: {
-        backgroundImage: `url(${tennisCourtBackground})`,
-      },
-    }
   },
 }
 </script>
@@ -54,8 +46,8 @@ export default {
 :global(body) {
   margin: 0;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: #f7fff7;
-  color: #143524;
+  background: #081120;
+  color: #f8fafc;
 }
 
 :global(a) {
@@ -66,9 +58,10 @@ export default {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+  background:
+    radial-gradient(circle at top left, rgba(45, 212, 191, 0.16), transparent 32%),
+    radial-gradient(circle at top right, rgba(59, 130, 246, 0.18), transparent 26%),
+    linear-gradient(180deg, #081120 0%, #0b1427 36%, #0d172a 100%);
 }
 
 .container {
@@ -82,7 +75,7 @@ export default {
   position: absolute;
   border-radius: 999px;
   filter: blur(70px);
-  opacity: 0.65;
+  opacity: 0.45;
   pointer-events: none;
   animation: floatOrb 13s ease-in-out infinite;
 }
@@ -92,7 +85,7 @@ export default {
   height: 320px;
   top: 80px;
   left: -80px;
-  background: rgba(96, 232, 139, 0.32);
+  background: rgba(8, 209, 112, 0.28);
 }
 
 .orb-2 {
@@ -100,7 +93,7 @@ export default {
   height: 360px;
   top: 180px;
   right: -90px;
-  background: rgba(197, 255, 207, 0.48);
+  background: rgba(59, 130, 246, 0.24);
   animation-delay: 2s;
 }
 
@@ -108,8 +101,8 @@ export default {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(29, 107, 56, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(29, 107, 56, 0.08) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
   background-size: 34px 34px;
   mask-image: radial-gradient(circle at center, black 36%, transparent 85%);
   pointer-events: none;

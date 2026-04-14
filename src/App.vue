@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="page" :style="pageBackgroundStyle">
     <div class="bg-orb orb-1"></div>
     <div class="bg-orb orb-2"></div>
     <div class="bg-grid"></div>
@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import tennisCourtBackground from './assets/tennis-court-header.jpg'
 import AppHeader from './components/AppHeader.vue'
 import BookingSection from './components/BookingSection.vue'
 import ContactSection from './components/ContactSection.vue'
@@ -30,6 +31,13 @@ export default {
     ContactSection,
     OffersSection,
     PhilosophySection,
+  },
+  data() {
+    return {
+      pageBackgroundStyle: {
+        backgroundImage: `url(${tennisCourtBackground})`,
+      },
+    }
   },
 }
 </script>
@@ -58,10 +66,9 @@ export default {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  background:
-    radial-gradient(circle at top left, rgba(45, 212, 191, 0.16), transparent 32%),
-    radial-gradient(circle at top right, rgba(59, 130, 246, 0.18), transparent 26%),
-    linear-gradient(180deg, #081120 0%, #0b1427 36%, #0d172a 100%);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .container {

@@ -34,10 +34,10 @@
           </p>
         </div>
 
-        <form class="booking-form" @submit.prevent="submitForm">
+        <form ref="bookingForm" class="booking-form" @submit.prevent="submitForm">
           <div class="form-group">
             <label for="trainer">Trainer</label>
-            <select id="trainer" v-model="form.trainer" required>
+            <select id="trainer" v-model="form.trainer" name="trainer" required>
               <option disabled value="">Bitte Trainer auswaehlen</option>
               <option v-for="trainer in trainers" :key="trainer.name" :value="trainer.name">
                 {{ trainer.name }}
@@ -47,17 +47,17 @@
 
           <div class="form-group">
             <label for="name">Name</label>
-            <input id="name" v-model="form.name" type="text" placeholder="Dein Name" required />
+            <input id="name" v-model="form.name" name="name" type="text" placeholder="Dein Name" required />
           </div>
 
           <div class="form-group">
             <label for="phone">Telefonnummer</label>
-            <input id="phone" v-model="form.phone" type="tel" placeholder="0123 456789" required />
+            <input id="phone" v-model="form.phone" name="phone" type="tel" placeholder="0123 456789" required />
           </div>
 
           <div class="form-group">
             <label for="email">E-Mail</label>
-            <input id="email" v-model="form.email" type="email" placeholder="deinname@mail.de" required />
+            <input id="email" v-model="form.email" name="email" type="email" placeholder="deinname@mail.de" required />
           </div>
 
           <div class="form-group full-width">
@@ -65,12 +65,17 @@
             <textarea
               id="message"
               v-model="form.message"
+              name="message"
               rows="4"
               placeholder="Erzaehl kurz, was du trainieren moechtest"
             ></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary full-button magnetic-button">Training buchen</button>
+          <input type="hidden" name="site_name" value="Trainer H Tennis" />
+
+          <button type="submit" class="btn btn-primary full-button magnetic-button" :disabled="isSubmitting">
+            {{ isSubmitting ? 'Anfrage wird gesendet...' : 'Training buchen' }}
+          </button>
         </form>
       </div>
     </div>
@@ -78,16 +83,24 @@
     <p v-if="submitted" class="success-message reveal visible">
       Danke! Deine Anfrage wurde erfasst.
     </p>
+
+    <p v-if="errorMessage" class="error-message reveal visible">
+      {{ errorMessage }}
+    </p>
   </section>
 </template>
 
 <script>
+import emailjs from '@emailjs/browser'
+
 export default {
   name: 'BookingSection',
   data() {
     return {
       submitted: false,
+      isSubmitting: false,
       visible: false,
+      errorMessage: '',
       observer: null,
       trainers: [
         {
@@ -138,15 +151,47 @@ export default {
     this.observer?.disconnect()
   },
   methods: {
-    submitForm() {
-      console.log('Formulardaten:', this.form)
-      this.submitted = true
+    resetForm() {
       this.form = {
         trainer: '',
         name: '',
         phone: '',
         email: '',
         message: '',
+      }
+    },
+    async submitForm() {
+      this.errorMessage = ''
+      this.submitted = false
+
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+
+      if (!serviceId || !templateId || !publicKey) {
+        this.errorMessage = 'EmailJS ist noch nicht fertig konfiguriert. Bitte trage die Env-Werte ein.'
+        return
+      }
+
+      if (!this.$refs.bookingForm) {
+        this.errorMessage = 'Das Buchungsformular konnte nicht gefunden werden.'
+        return
+      }
+
+      try {
+        this.isSubmitting = true
+
+        await emailjs.sendForm(serviceId, templateId, this.$refs.bookingForm, {
+          publicKey,
+        })
+
+        this.submitted = true
+        this.resetForm()
+      } catch (error) {
+        console.error('EmailJS Versand fehlgeschlagen:', error)
+        this.errorMessage = 'Deine Anfrage konnte gerade nicht gesendet werden. Bitte versuche es erneut.'
+      } finally {
+        this.isSubmitting = false
       }
     },
   },
@@ -425,9 +470,20 @@ export default {
   width: 100%;
 }
 
+.full-button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
 .success-message {
   margin-top: 18px;
   color: #b9ffcb;
+  font-weight: 700;
+}
+
+.error-message {
+  margin-top: 12px;
+  color: #ffe6e6;
   font-weight: 700;
 }
 

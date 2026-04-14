@@ -13,7 +13,7 @@
     <section class="hero-content container">
       <div class="hero-text reveal reveal-delay-1" :class="{ visible: visibleHero }">
         <p class="eyebrow">Personal Tennis Training</p>
-        <h1>Modernes Tennistraining fuer Technik, Matchstaerke und Selbstvertrauen</h1>
+        <h1>Deine Plattform für Tennis-Coaching und Gear</h1>
         <p class="subtitle">
           Individuelles Coaching fuer Anfaenger, Fortgeschrittene und ambitionierte
           Spieler mit klarer Struktur, spuerbarem Fortschritt und einem modernen Trainingserlebnis.
@@ -40,15 +40,28 @@
         </div>
       </div>
 
-      <div class="hero-panel glass-card reveal reveal-delay-2 floating-card" :class="{ visible: visibleHero }">
-        <div class="panel-badge">Dein Fokus</div>
-        <h3>Gezielt trainieren statt nur Baelle schlagen</h3>
-        <ul>
-          <li><span>Court</span> Einzeltraining mit persoenlichem Fokus</li>
-          <li><span>Speed</span> Matchvorbereitung und Spielsituationen</li>
-          <li><span>Move</span> Beweglichkeit, Fussarbeit und Athletik</li>
-          <li><span>Mind</span> Mentale Staerke und Konstanz im Spiel</li>
-        </ul>
+      <div class="hero-sidecards reveal reveal-delay-2" :class="{ visible: visibleHero }">
+        <div class="hero-panel glass-card floating-card">
+          <div class="panel-badge">Dein Fokus</div>
+          <h3>Gezielt trainieren statt nur Baelle schlagen</h3>
+          <ul>
+            <li><span>Court</span> Einzeltraining mit persoenlichem Fokus</li>
+            <li><span>Speed</span> Matchvorbereitung und Spielsituationen</li>
+            <li><span>Move</span> Beweglichkeit, Fussarbeit und Athletik</li>
+            <li><span>Mind</span> Mentale Staerke und Konstanz im Spiel</li>
+          </ul>
+        </div>
+
+        <div class="hero-panel gear-panel glass-card floating-card float-delay-2">
+          <div class="panel-badge">Gear</div>
+          <h3>Material, das zu deinem Spiel passt</h3>
+          <ul>
+            <li><span>Racket</span> Schlaeger passend zu Spielstil und Schwungtempo</li>
+            <li><span>String</span> Netzspannung abgestimmt auf Kontrolle und Power</li>
+            <li><span>Grip</span> Griffstaerke und Overgrip fuer sicheres Handling</li>
+            <li><span>Shoes</span> Schuhe und Platzprofil fuer Stabilitaet und Bewegung</li>
+          </ul>
+        </div>
       </div>
     </section>
   </header>
@@ -148,9 +161,15 @@ export default {
 }
 
 .hero-text,
-.hero-panel {
+.hero-panel,
+.hero-sidecards {
   position: relative;
   z-index: 1;
+}
+
+.hero-sidecards {
+  display: grid;
+  gap: 18px;
 }
 
 .hero-text h1 {
@@ -239,6 +258,10 @@ export default {
   border-radius: 28px;
   overflow: hidden;
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.gear-panel {
+  background: rgba(247, 255, 248, 0.72);
 }
 
 .hero-panel::before {

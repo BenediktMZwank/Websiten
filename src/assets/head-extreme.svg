@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 720" role="img" aria-labelledby="title desc">
+  <title id="title">Head Extreme Tennisschlaeger</title>
+  <desc id="desc">Tennisschlaeger mit schwarzem Rahmen und blaugruenen Akzenten.</desc>
+  <rect width="520" height="720" fill="#ffffff"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M260 418c-104 0-176-80-176-190C84 106 157 40 260 40s176 66 176 188c0 110-72 190-176 190Z" stroke="#111415" stroke-width="18"/>
+    <path d="M118 298c18 43 54 81 104 101" stroke="#1f6571" stroke-width="16"/>
+    <path d="M399 251c-5 62-35 116-83 148" stroke="#245e70" stroke-width="16"/>
+    <path d="M187 398c12 49 27 100 45 151" stroke="#111415" stroke-width="20"/>
+    <path d="M333 398c-12 49-27 100-45 151" stroke="#111415" stroke-width="20"/>
+    <path d="M232 549c16 19 40 19 56 0" stroke="#111415" stroke-width="20"/>
+    <path d="M260 558v117" stroke="#151515" stroke-width="52"/>
+    <path d="M260 565v106" stroke="#242424" stroke-width="38"/>
+    <path d="M236 609h48M236 641h48" stroke="#111" stroke-width="3"/>
+    <path d="M126 129h267M110 171h303M101 213h318M101 255h318M113 297h295M140 339h240" stroke="#2b3030" stroke-width="3"/>
+    <path d="M145 85v270M187 63v322M229 48v348M271 48v348M313 63v322M355 86v270" stroke="#2b3030" stroke-width="3"/>
+  </g>
+</svg>

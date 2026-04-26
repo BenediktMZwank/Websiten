@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 720" role="img" aria-labelledby="title desc">
+  <title id="title">Head Gravity Tennisschlaeger</title>
+  <desc id="desc">Tennisschlaeger mit hellem Rahmen und neongelben Akzenten.</desc>
+  <rect width="520" height="720" fill="#ffffff"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M260 418c-99 0-170-78-170-188C90 108 160 42 260 42s170 66 170 188c0 110-71 188-170 188Z" stroke="#eefad7" stroke-width="20"/>
+    <path d="M407 156c16 42 16 95 0 143" stroke="#cfff1f" stroke-width="20"/>
+    <path d="M116 262c12 55 48 108 110 138" stroke="#cfff1f" stroke-width="20"/>
+    <path d="M190 400c14 50 29 100 45 150" stroke="#ecf8d2" stroke-width="20"/>
+    <path d="M330 400c-14 50-29 100-45 150" stroke="#ecf8d2" stroke-width="20"/>
+    <path d="M235 550c15 18 35 18 50 0" stroke="#ecf8d2" stroke-width="20"/>
+    <path d="M260 560v116" stroke="#e8f7cd" stroke-width="52"/>
+    <path d="M260 568v103" stroke="#f3ffdb" stroke-width="38"/>
+    <path d="M237 612h46M237 644h46" stroke="#d9edbb" stroke-width="3"/>
+    <path d="M128 130h264M112 172h296M105 214h310M105 256h310M117 298h286M144 340h232" stroke="#343a34" stroke-width="3"/>
+    <path d="M146 86v270M188 64v321M230 49v348M272 49v348M314 64v321M356 86v270" stroke="#343a34" stroke-width="3"/>
+  </g>
+</svg>

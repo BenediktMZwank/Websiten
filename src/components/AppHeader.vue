@@ -5,6 +5,7 @@
       <div class="nav-links">
         <a href="#philosophie">Philosophie</a>
         <a href="#angebote">Angebote</a>
+        <a href="#produkte">Produkte</a>
         <a href="#kontakt">Kontakt</a>
         <a href="#probestunde" class="btn btn-small btn-primary magnetic-button">Probestunde</a>
       </div>

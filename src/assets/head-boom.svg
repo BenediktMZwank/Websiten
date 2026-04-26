@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 720" role="img" aria-labelledby="title desc">
+  <title id="title">Head Boom Tennisschlaeger</title>
+  <desc id="desc">Tennisschlaeger mit schwarzem und tuerkisem Rahmen.</desc>
+  <rect width="520" height="720" fill="#ffffff"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M259 414c-102 0-175-82-175-190C84 105 156 38 260 38s176 67 176 186c0 108-74 190-177 190Z" stroke="#101515" stroke-width="18"/>
+    <path d="M92 238c8 74 61 146 151 170" stroke="#39d2bd" stroke-width="20"/>
+    <path d="M426 166c20 78-8 176-81 222" stroke="#46d8c5" stroke-width="20"/>
+    <path d="M187 397c12 48 27 98 45 151" stroke="#15191a" stroke-width="20"/>
+    <path d="M333 397c-12 48-27 98-45 151" stroke="#15191a" stroke-width="20"/>
+    <path d="M232 548c16 19 40 19 56 0" stroke="#15191a" stroke-width="20"/>
+    <path d="M260 558v115" stroke="#161717" stroke-width="52"/>
+    <path d="M260 564v109" stroke="#262828" stroke-width="38"/>
+    <path d="M236 610h48M236 642h48" stroke="#111" stroke-width="3"/>
+    <path d="M126 128h267M110 170h303M101 212h318M101 254h318M113 296h295M139 338h242" stroke="#2e3333" stroke-width="3"/>
+    <path d="M145 84v270M187 62v322M229 47v348M271 47v348M313 62v322M355 86v268" stroke="#2e3333" stroke-width="3"/>
+  </g>
+</svg>

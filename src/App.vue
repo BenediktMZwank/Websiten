@@ -9,6 +9,7 @@
     <main>
       <PhilosophySection />
       <OffersSection />
+      <ProductsSection />
       <BookingSection />
       <ContactSection />
     </main>
@@ -22,6 +23,7 @@ import BookingSection from './components/BookingSection.vue'
 import ContactSection from './components/ContactSection.vue'
 import OffersSection from './components/OffersSection.vue'
 import PhilosophySection from './components/PhilosophySection.vue'
+import ProductsSection from './components/ProductsSection.vue'
 
 export default {
   name: 'App',
@@ -31,6 +33,7 @@ export default {
     ContactSection,
     OffersSection,
     PhilosophySection,
+    ProductsSection,
   },
   data() {
     return {

@@ -1,7 +1,7 @@
 <template>
   <header class="hero">
     <nav class="nav container reveal reveal-delay-1" :class="{ visible: visibleNav }">
-      <div class="logo">Trainer H</div>
+      <div class="logo">MegoPlayTennis</div>
       <div class="nav-links">
         <a href="#philosophie">Philosophie</a>
         <a href="#angebote">Angebote</a>

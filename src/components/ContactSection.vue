@@ -5,18 +5,20 @@
       <h2>Direkter Kontakt</h2>
     </div>
 
-    <div class="contact-card reveal reveal-delay-2" :class="{ visible }">
-      <div>
-        <span class="contact-label">Name</span>
-        <p>Trainer H</p>
-      </div>
-      <div>
-        <span class="contact-label">Telefon</span>
-        <p>+49 123 456789</p>
-      </div>
-      <div>
-        <span class="contact-label">E-Mail</span>
-        <p>trainerh@example.com</p>
+    <div class="contact-list reveal reveal-delay-2" :class="{ visible }">
+      <div v-for="contact in contacts" :key="contact.name" class="contact-card">
+        <div>
+          <span class="contact-label">Name</span>
+          <p>{{ contact.name }}</p>
+        </div>
+        <div>
+          <span class="contact-label">Telefon</span>
+          <p>{{ contact.phone }}</p>
+        </div>
+        <div>
+          <span class="contact-label">E-Mail</span>
+          <p>{{ contact.email }}</p>
+        </div>
       </div>
     </div>
   </section>
@@ -29,6 +31,23 @@ export default {
     return {
       visible: false,
       observer: null,
+      contacts: [
+        {
+          name: 'Kerem Erguel',
+          phone: '+49 123 456789',
+          email: 'kerem@example.com',
+        },
+        {
+          name: 'Lena Hoffmann',
+          phone: '+49 123 456790',
+          email: 'lena@example.com',
+        },
+        {
+          name: 'David Kara',
+          phone: '+49 123 456791',
+          email: 'david@example.com',
+        },
+      ],
     }
   },
   mounted() {
@@ -96,6 +115,11 @@ export default {
   letter-spacing: -0.04em;
   color: #f7fff8;
   text-shadow: 0 8px 24px rgba(12, 34, 21, 0.32);
+}
+
+.contact-list {
+  display: grid;
+  gap: 18px;
 }
 
 .contact-card {

@@ -71,7 +71,7 @@
             ></textarea>
           </div>
 
-          <input type="hidden" name="site_name" value="Trainer H Tennis" />
+          <input type="hidden" name="site_name" value="MegoPlayTennis" />
 
           <button type="submit" class="btn btn-primary full-button magnetic-button" :disabled="isSubmitting">
             {{ isSubmitting ? 'Anfrage wird gesendet...' : 'Training buchen' }}
